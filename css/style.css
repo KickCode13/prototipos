@@ -435,3 +435,47 @@ footer {
   z-index: 10; /* garante que fique acima de outros elementos */
   position: relative;
 }
+/* Botões de contato (WhatsApp e Instagram) */
+.contato-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-whatsapp,
+.btn-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+  border: 2px solid transparent;
+  font-size: 1rem;
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  color: #fff;
+  border-color: #25D366;
+}
+
+.btn-whatsapp:hover {
+  background: #1da851;
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(37, 211, 102, 0.3);
+}
+
+.btn-instagram {
+  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: #fff;
+  border-color: transparent;
+}
+
+.btn-instagram:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(225, 48, 108, 0.3);
+}
