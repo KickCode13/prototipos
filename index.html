@@ -1,93 +1,140 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LM-S Digital Futuro da Tecnologia</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LM-S Digital - Futuro da Tecnologia</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons (opcional) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- Seu CSS personalizado (sobrescreve o Bootstrap) -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
   <!-- Fundo com partículas -->
   <div id="particles"></div>
 
-  <!-- Navbar Futurista -->
-  <nav class="navbar">
+  <!-- ===== NAVBAR BOOTSTRAP ===== -->
+  <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
     <div class="container">
-      <a href="#" class="logo">LM-S <span>Digital</span></a>
-      <ul class="nav-links">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#contato">Contato</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle">Soluções ▼</a>
-          <ul class="dropdown-menu">
-            <li><a href="pages/institucional/index.html">Institucional</a></li>
-            <li><a href="pages/portfolio/index.html">Portfólio</a></li>
-            <li><a href="pages/ecommerce/index.html">E‑commerce</a></li>
-            <li><a href="pages/blog/index.html">Blog</a></li>
-            <li><a href="pages/landing/index.html">Landing Page</a></li>
-          </ul>
-        </li>
-      </ul>
-      <div class="hamburger">☰</div>
+      <!-- Logo -->
+      <a class="navbar-brand logo" href="#">LM-S <span>Digital</span></a>
+
+      <!-- Botão hambúrguer (Bootstrap) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+              aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu colapsável -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+
+          <!-- Dropdown "Soluções" -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+               data-bs-toggle="dropdown" aria-expanded="false">
+              Soluções
+            </a>
+            <ul class="dropdown-menu custom-dropdown" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="pages/institucional/index.html">Institucional</a></li>
+              <li><a class="dropdown-item" href="pages/portfolio/index.html">Portfólio</a></li>
+              <li><a class="dropdown-item" href="pages/ecommerce/index.html">E‑commerce</a></li>
+              <li><a class="dropdown-item" href="pages/blog/index.html">Blog</a></li>
+              <li><a class="dropdown-item" href="pages/landing/index.html">Landing Page</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- ===== HERO ===== -->
   <section class="hero">
-    <div class="container">
+    <div class="container text-center">
       <h1 class="glitch" data-text="Construímos o amanhã">Construímos o amanhã</h1>
       <p class="subtitle">Tecnologia de ponta com design que impacta</p>
       <a href="#servicos" class="btn-neon">Explore agora</a>
     </div>
   </section>
 
-  <!-- Sobre -->
+  <!-- ===== SOBRE ===== -->
   <section id="sobre" class="sobre">
     <div class="container">
       <h2>Sobre a NexusCorp</h2>
-      <div class="grid-2">
-        <div>
+      <div class="row align-items-center">
+        <div class="col-lg-6">
           <p>Somos uma empresa focada em soluções digitais inovadoras. Combinamos inteligência artificial, design imersivo e estratégias de marketing para levar sua marca ao próximo nível.</p>
           <p>Nossos projetos são desenvolvidos com arquitetura modular, garantindo performance e escalabilidade.</p>
         </div>
-        <div class="stats">
-          <div><span>+120</span> Projetos</div>
-          <div><span>98%</span> Satisfação</div>
-          <div><span>5 anos</span> de mercado</div>
+        <div class="col-lg-6">
+          <div class="stats d-flex justify-content-around text-center">
+            <div><span>+120</span> Projetos</div>
+            <div><span>98%</span> Satisfação</div>
+            <div><span>5 anos</span> de mercado</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Serviços -->
+  <!-- ===== SERVIÇOS ===== -->
   <section id="servicos" class="servicos">
     <div class="container">
       <h2>Nossos Serviços</h2>
-      <div class="cards">
-        <div class="card"><h3>Web Design</h3><p>Experiências visuais futuristas e responsivas.</p></div>
-        <div class="card"><h3>Desenvolvimento</h3><p>Sistemas robustos com as melhores práticas.</p></div>
-        <div class="card"><h3>Consultoria</h3><p>Estratégia digital para alavancar seu negócio.</p></div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <h3>Web Design</h3>
+            <p>Experiências visuais futuristas e responsivas.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <h3>Desenvolvimento</h3>
+            <p>Sistemas robustos com as melhores práticas.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <h3>Consultoria</h3>
+            <p>Estratégia digital para alavancar seu negócio.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Contato -->
-  <section id="contato" class="contato">
+  <!-- ===== CONTATO ===== -->
+  <section id="contato" class="contato text-center">
     <div class="container">
       <h2>Vamos conversar?</h2>
-      <p>Entre em contato e descubra como podemos transformar sua ideia em realidade.</p>
+      <p class="mb-4">Entre em contato e descubra como podemos transformar sua ideia em realidade.</p>
       <a href="mailto:contato@nexuscorp.com" class="btn-neon">Enviar e-mail</a>
     </div>
   </section>
 
-  <footer>
+  <!-- ===== FOOTER ===== -->
+  <footer class="text-center py-4">
     <div class="container">
-      <p>© 2026 NexusCorp – Todos os direitos reservados.</p>
+      <p class="mb-0">© 2026 NexusCorp – Todos os direitos reservados.</p>
     </div>
   </footer>
 
+  <!-- Bootstrap JS (necessário para o menu colapsável e dropdown) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Seu JavaScript personalizado -->
   <script src="js/script.js"></script>
 </body>
 </html>
